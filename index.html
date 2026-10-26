@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111019">
+  <title>StoryMesh — Stories made together</title>
+  <meta name="description" content="An interactive storytelling prototype where audiences shape what happens next.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="StoryMesh home"><span class="brand-mark">S</span><span>story<span class="brand-light">mesh</span></span></a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a class="active" href="#discover">Discover</a><a href="#how-it-works">How it works</a><a href="#creators">Creators</a>
+    </nav>
+    <div class="header-actions"><span class="language-pill">தமிழ் · EN</span><button class="button button-small button-outline" id="joinTop">Join the story</button></div>
+  </header>
+
+  <main>
+    <section class="hero" id="discover">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="live-dot"></span> STORIES DON'T END HERE</div>
+        <h1>Don't just watch.<br><span class="gradient-text">Shape what happens next.</span></h1>
+        <p class="hero-sub">A new kind of story platform. Watch original stories, choose the next turn, and help creators build worlds with the community.</p>
+        <div class="hero-actions"><a class="button button-primary" href="#featured">Explore stories <span>↗</span></a><button class="button button-ghost" id="howBtn">How StoryMesh works <span>↓</span></button></div>
+        <div class="hero-proof"><div class="avatar-stack"><span>AK</span><span>MS</span><span>RJ</span><span>+</span></div><div><strong>Watchers become co-creators</strong><small>Prototype experience · Original sample stories</small></div></div>
+      </div>
+      <div class="hero-art">
+        <div class="poster-glow"></div>
+        <div class="hero-poster">
+          <div class="poster-top"><span class="poster-tag">STORYMESH ORIGINAL</span><span class="poster-ep">EP 01 / 04</span></div>
+          <div class="train-scene" aria-hidden="true"><div class="moon"></div><div class="train-window window-a"></div><div class="train-window window-b"></div><div class="train-window window-c"></div><div class="train-body"></div><div class="platform"></div><div class="silhouette"></div></div>
+          <div class="poster-bottom"><span class="genre">MYSTERY · THRILLER</span><h2>The Last Train</h2><p>One bag. Two choices. A thousand possible stories.</p><button class="poster-play" id="heroPlay" aria-label="Open The Last Train story">▶</button></div>
+        </div>
+        <div class="floating-note note-vote"><span class="note-icon">✦</span><div><strong>Your choice matters</strong><small>Vote for the next scene</small></div></div>
+        <div class="floating-note note-creator"><span class="creator-mini">RJ</span><div><strong>Riya J.</strong><small>Scene contributor</small></div><span class="tiny-check">✓</span></div>
+      </div>
+    </section>
+
+    <section class="metrics-row" aria-label="Product principles">
+      <div><span class="metric-icon">◉</span><span><strong>Watch</strong><small>Original short stories</small></span></div>
+      <div><span class="metric-icon">⑂</span><span><strong>Choose</strong><small>Influence the next episode</small></span></div>
+      <div><span class="metric-icon">✳</span><span><strong>Contribute</strong><small>Add ideas and scenes</small></span></div>
+      <div><span class="metric-icon">↗</span><span><strong>Get credited</strong><small>Build with creators</small></span></div>
+    </section>
+
+    <section class="section featured-section" id="featured">
+      <div class="section-heading"><div><div class="eyebrow">YOUR NEXT OBSESSION</div><h2>Stories at a turning point</h2><p>Every choice opens a different possibility.</p></div><div class="filter-row"><button class="filter-chip selected" data-filter="all">All stories</button><button class="filter-chip" data-filter="mystery">Mystery</button><button class="filter-chip" data-filter="drama">Drama</button><button class="filter-chip" data-filter="sci-fi">Sci-fi</button></div></div>
+      <div class="story-grid" id="storyGrid">
+        <article class="story-card" data-genre="mystery">
+          <button class="story-cover cover-train" data-story="last-train" aria-label="Open The Last Train"><span class="cover-label">STORYMESH ORIGINAL</span><span class="cover-number">01</span><div class="cover-visual train-mini"><span></span><i></i></div><div class="cover-copy"><span class="genre">MYSTERY · 4 EPISODES</span><h3>The Last Train</h3><p>A strange bag changes one passenger's life.</p></div><span class="cover-arrow">↗</span></button>
+          <div class="card-meta"><span><span class="status-dot"></span> Audience choice open</span><span>6 min</span></div>
+        </article>
+        <article class="story-card" data-genre="sci-fi">
+          <button class="story-cover cover-signal" data-story="tomorrow-signal" aria-label="Open The Tomorrow Signal"><span class="cover-label">COMMUNITY STORY</span><span class="cover-number">02</span><div class="signal-orb"></div><div class="cover-copy"><span class="genre">SCI-FI · 3 EPISODES</span><h3>The Tomorrow Signal</h3><p>A message arrives from a day that hasn't happened.</p></div><span class="cover-arrow">↗</span></button>
+          <div class="card-meta"><span><span class="status-dot purple"></span> New contribution round</span><span>5 min</span></div>
+        </article>
+        <article class="story-card" data-genre="drama">
+          <button class="story-cover cover-rain" data-story="monsoon-letters" aria-label="Open Monsoon Letters"><span class="cover-label">CREATOR SPOTLIGHT</span><span class="cover-number">03</span><div class="rain-scene"><span></span><i></i><b></b></div><div class="cover-copy"><span class="genre">DRAMA · 2 EPISODES</span><h3>Monsoon Letters</h3><p>Three letters. One secret left unopened.</p></div><span class="cover-arrow">↗</span></button>
+          <div class="card-meta"><span><span class="status-dot amber"></span> Ideas wanted</span><span>4 min</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="choice-feature">
+      <div class="choice-copy"><div class="eyebrow">THE STORY IS IN YOUR HANDS</div><h2>What happens<br>next is <span class="gradient-text">up to you.</span></h2><p>At the end of an episode, choose a direction or suggest a scene. The community helps shape the next chapter — and contributors get visible credit.</p><button class="button button-primary" id="chooseNow">Make a story choice <span>↗</span></button><small class="disclaimer">Demo votes are stored only in this browser. No real creator payments or public posting.</small></div>
+      <div class="choice-demo">
+        <div class="choice-window-top"><span class="window-dots"><i></i><i></i><i></i></span><span>THE LAST TRAIN · EP 01</span><span class="episode-live">CHOICE OPEN</span></div>
+        <div class="choice-scene"><div class="scene-moon"></div><div class="scene-seat"></div><div class="mystery-bag"></div><div class="scene-caption"><span>LAST MOMENTS</span><strong>The conductor is watching.</strong></div></div>
+        <div class="choice-options"><button class="choice-option" data-vote="open"><span class="option-letter">A</span><span><strong>Open the bag</strong><small>Find out what is inside.</small></span><span class="option-arrow">↗</span></button><button class="choice-option" data-vote="conductor"><span class="option-letter">B</span><span><strong>Ask the conductor</strong><small>Someone knows more than they say.</small></span><span class="option-arrow">↗</span></button></div>
+        <div class="vote-result" id="voteResult" aria-live="polite">Choose a path to cast your demo vote.</div>
+      </div>
+    </section>
+
+    <section class="section how-section" id="how-it-works">
+      <div class="section-heading centered"><div class="eyebrow">MADE FOR PARTICIPATION</div><h2>Three ways to be part of a story</h2><p>You don't need a camera or a studio to contribute.</p></div>
+      <div class="steps-grid">
+        <div class="step-card"><span class="step-number">01</span><div class="step-icon">▶</div><h3>Watch</h3><p>Discover short, original stories across genres and languages.</p></div>
+        <div class="step-card"><span class="step-number">02</span><div class="step-icon">⑂</div><h3>Influence</h3><p>Vote on what happens next and see how the community decides.</p></div>
+        <div class="step-card"><span class="step-number">03</span><div class="step-icon">✳</div><h3>Contribute</h3><p>Submit a scene idea, dialogue or a creative continuation.</p></div>
+      </div>
+    </section>
+
+    <section class="creator-banner" id="creators">
+      <div class="creator-banner-art"><div class="creator-orbit orbit-one"></div><div class="creator-orbit orbit-two"></div><div class="creator-avatar avatar-one">AK</div><div class="creator-avatar avatar-two">RJ</div><div class="creator-avatar avatar-three">MS</div><div class="creator-star">✦</div></div>
+      <div class="creator-banner-copy"><div class="eyebrow">FOR WRITERS, DREAMERS & MAKERS</div><h2>Your idea could be<br>the next big turn.</h2><p>Start with a scene, a character or one unexpected idea. Build something with the community.</p><button class="button button-primary" id="contributeBanner">Contribute a scene <span>↗</span></button></div>
+    </section>
+
+    <section class="section community-section">
+      <div class="section-heading"><div><div class="eyebrow">THE COMMUNITY LAYER</div><h2>Ideas can come from anywhere</h2><p>Sample creator cards for the prototype.</p></div></div>
+      <div class="creator-grid">
+        <div class="creator-card"><div class="creator-avatar large avatar-a">AK</div><div><strong>Arun K.</strong><span>Story writer · Mystery</span></div><span class="creator-stat">4 scenes</span></div>
+        <div class="creator-card"><div class="creator-avatar large avatar-b">RJ</div><div><strong>Riya J.</strong><span>Scene contributor · Drama</span></div><span class="creator-stat">7 ideas</span></div>
+        <div class="creator-card"><div class="creator-avatar large avatar-c">MS</div><div><strong>Mira S.</strong><span>Voice artist · Sci-fi</span></div><span class="creator-stat">3 stories</span></div>
+      </div>
+    </section>
+
+    <section class="final-cta"><div class="eyebrow">THIS IS JUST THE BEGINNING</div><h2>One story can go<br><span class="gradient-text">a thousand ways.</span></h2><p>Come watch. Make a choice. Leave your mark.</p><button class="button button-primary" id="joinBottom">Join the story <span>↗</span></button></section>
+  </main>
+
+  <footer class="footer"><a class="brand" href="#"><span class="brand-mark">S</span><span>story<span class="brand-light">mesh</span></span></a><span>Stories made together.</span><span class="footer-note">Prototype v0.1 · Original sample content · No real payouts</span></footer>
+
+  <div class="modal-backdrop" id="modalBackdrop" hidden>
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" aria-label="Close dialog">×</button>
+      <div class="modal-eyebrow" id="modalEyebrow">STORYMESH</div><h2 id="modalTitle">Join the story</h2><p id="modalDescription">Choose how you want to participate.</p>
+      <div id="modalBody"></div>
+      <div class="modal-feedback" id="modalFeedback" aria-live="polite"></div>
+    </section>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
